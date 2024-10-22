@@ -5,12 +5,7 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour
 {
     //Test1: Walk animation while moving foward.
-
-    // Start is called before the first frame update
-    void Start()
-    {
         
-    }
 
     // Update is called once per frame
     void Update()
@@ -25,6 +20,12 @@ public class AnimationController : MonoBehaviour
         else
         {
             GetComponent<Animator>().SetTrigger("Idle");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Animator>().SetTrigger("Scream");
+
         }
 
     }
