@@ -1384,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DragonSoulEaterPurplePBR
       objectReference: {fileID: 0}
+    - target: {fileID: 971994670, guid: 0bdbbc31102770146858004072a8752a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 971994672, guid: 0bdbbc31102770146858004072a8752a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -1668,7 +1672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24299201}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c253bd8f9ed0687893850443b967219, type: 3}
   m_Name: 
@@ -1677,7 +1681,7 @@ MonoBehaviour:
   force: 2000
   maxSpeed: 10
   rotationSpeed: 0.5
-  standstillRotationSpeed: 500
+  standstillRotationSpeed: 30
 --- !u!114 &5045196433551072614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1692,9 +1696,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motorOn: 0
   force: 800
-  maxSpeed: 3
-  rotationSpeed: 1
-  standstillRotationSpeed: 100
+  maxSpeed: 1
+  rotationSpeed: 0.3
+  standstillRotationSpeed: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
