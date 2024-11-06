@@ -31,28 +31,28 @@ public class MouseRotator : MonoBehaviour
     //Grab mouse input and rotate the transform this script is on.
     private void RotateWithMouseInput()
     {
-        float MIN_Y = 0.0f;
-        float MAX_Y = 360.0f;
-        float MIN_X = -45.0f;
-        float MAX_X = 90.0f;
+        float min_y = 0.0f;
+        float max_y = 360.0f;
+        float min_x = -45.0f;
+        float max_x = 90.0f;
 
         y += Input.GetAxis("Mouse X") * (sensitivity * Time.deltaTime);
-        if (y < MIN_Y)
+        if (y < min_y)
         {
-            y += MAX_Y;
+            y += max_y;
         }
-        else if (y > MAX_Y)
+        else if (y > max_y)
         {
-            y -= MAX_Y;
+            y -= max_y;
         }
         x -= Input.GetAxis("Mouse Y") * (sensitivity * Time.deltaTime);
-        if (x < MIN_X)
+        if (x < min_x)
         {
-            x = MIN_X;
+            x = min_x;
         }
-        else if(x > MAX_X)
+        else if(x > max_x)
         {
-            x = MAX_X;
+            x = max_x;
         }
 
         transform.rotation = Quaternion.Euler(x, y, 0);
