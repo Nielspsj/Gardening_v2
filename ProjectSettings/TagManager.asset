@@ -7,6 +7,7 @@ TagManager:
   - Plant
   - Storage
   - ImageForPhoto
+  - Pickup
   layers:
   - Default
   - TransparentFX
