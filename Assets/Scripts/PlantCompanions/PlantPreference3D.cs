@@ -22,6 +22,8 @@ public class PlantPreference3D : MonoBehaviour
     //private List<Collider2D> hitCollidersList = new List<Collider2D>();
     private Collider[] hitCollidersArray;
     public List<GameObject> neighboursList = new List<GameObject>();
+    public List<Color> dislikesList = new List<Color>();
+    private Color dislikeColor = Color.blue;
 
 
     // Start is called before the first frame update
@@ -68,7 +70,7 @@ public class PlantPreference3D : MonoBehaviour
                 {
                     neighboursList.Add(col.gameObject);
                 }
-            }
+            }            
         }
     }
 
@@ -79,12 +81,17 @@ public class PlantPreference3D : MonoBehaviour
             //Check for companions
             foreach (GameObject neighbourGO in neighboursList)
             {
-                if (plantBase.plantColor != neighbourGO.transform.gameObject.GetComponent<PlantBase>().plantColor)
+                if (plantBase.plantColor != neighbourGO.transform.gameObject.GetComponent<PlantBase>().plantColor && dislikeColor != neighbourGO.transform.gameObject.GetComponent<PlantBase>().plantColor)
                 {
                     //Found a companion.
                     companionScore += 1;                    
                     companionObject = neighbourGO.transform.gameObject;                    
-                }                
+                }
+                else
+                {
+                    //Something extra?
+                }
+                
             }
             //If no neighbour, then
             if(companionObject == null || !neighboursList.Contains(companionObject))

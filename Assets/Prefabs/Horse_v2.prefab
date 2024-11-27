@@ -551,9 +551,10 @@ GameObject:
   - component: {fileID: 3220242134592365416}
   - component: {fileID: 3173313512660233207}
   - component: {fileID: 4567925363634678695}
+  - component: {fileID: 5622482164206233543}
   m_Layer: 7
   m_Name: Horse_v2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,6 +692,19 @@ MonoBehaviour:
   force: 2
   maxSpeed: 1
   rotationSpeed: 2
+--- !u!114 &5622482164206233543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494668279224873273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fce64b7f324694db93bda597fc672a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupCount: 0
 --- !u!1 &6276315868716578908
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2984863936490689062}
   - component: {fileID: 1791630159586694422}
+  - component: {fileID: 5663727400940031964}
   m_Layer: 7
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -770,6 +785,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 100
+--- !u!114 &5663727400940031964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870887358863585072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f97b58637934a468a87c80d7585bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonPosition: {fileID: 349065077960388803}
+  thirdPersonPosition: {fileID: 4171733508426994386}
+  cameraTransform: {fileID: 818073361416615076}
 --- !u!1001 &4025467985865057407
 PrefabInstance:
   m_ObjectHideFlags: 0

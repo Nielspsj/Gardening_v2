@@ -13,5 +13,10 @@ public class PlantBase : MonoBehaviour
     void Start()
     {
         //GetComponent<SpriteRenderer>().color = plantColor;
+        if(plantColor == Color.blue)
+        {
+            Debug.Log("plantcolor: " + plantColor);
+
+        }
     }
 }
