@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 29
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 932
     height: 481
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -773,9 +773,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.616678, y: 5.607855, z: 6.642398}
+    m_Target: {x: 17.373877, y: -0.96796846, z: 12.715277}
     speed: 2
-    m_Value: {x: 9.616678, y: 5.607855, z: 6.642398}
+    m_Value: {x: 17.373877, y: -0.96796846, z: 12.715277}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -821,13 +821,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.22210465, y: 0.21610056, z: -0.050566044, w: 0.94939685}
+    m_Target: {x: 0.32877064, y: 0.1897197, z: -0.0676296, w: 0.92264384}
     speed: 2
-    m_Value: {x: 0.22211118, y: 0.2161069, z: -0.05056753, w: 0.94942474}
+    m_Value: {x: 0.32739788, y: 0.18982765, z: -0.06734736, w: 0.92316866}
   m_Size:
-    m_Target: 0.33045402
+    m_Target: 7.243132
     speed: 2
-    m_Value: 0.33045402
+    m_Value: 7.5844316
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1054,9 +1054,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 409cffff
-      m_LastClickedID: -25536
-      m_ExpandedIDs: 0aa5ffff38a7ffffdca8ffffd6b2ffff20b3ffff7ac5ffff90c8ffffc8c8ffff16c9fffff6ceffffacdaffffd8daffff46dbffff90dbffff46deffff16fbffffc475000010760000
+      m_SelectedIDs: 7ac0ffff
+      m_LastClickedID: -16262
+      m_ExpandedIDs: 6cbbffff7ac0ffffdcfaffff16fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1124,8 +1124,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Prefabs
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1141,7 +1140,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ea950000
     m_LastClickedID: 38378
-    m_ExpandedIDs: 00000000026a0000046a0000066a0000086a00000a6a00000c6a00000e6a0000106a0000126a0000146a0000166a0000186a00001a6a00001c6a00001e6a0000206a0000226a0000246a0000
+    m_ExpandedIDs: 000000009a6a00009c6a00009e6a0000a06a0000a26a0000a46a0000a66a0000a86a0000aa6a0000ac6a0000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1166,24 +1165,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 136}
+    scrollPos: {x: 0, y: 180}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000026a0000046a0000066a0000086a00000a6a00000c6a00000e6a0000106a0000126a0000146a0000166a0000186a00001a6a00001c6a00001e6a0000226a0000246a0000d86a0000e86a0000ea6a0000
+    m_ExpandedIDs: ffffffff000000009a6a00009c6a00009e6a0000a06a0000a26a0000a46a0000a66a0000a86a0000aa6a0000ac6a0000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000806b0000ca6b0000d66b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Gnome_v2
-      m_OriginalName: Gnome_v2
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 28458
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 

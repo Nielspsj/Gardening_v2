@@ -9,8 +9,10 @@ public class PlantPreference3D : MonoBehaviour
     //vTest 11: Companion behavior transfered from 2D to 3D.
     //Might need to adjust handling of the neighbour gathering since swapping to Array from List.
     //vTest 12: Companion behavior working on the horse storage. For effect use colored particle effect.
-    //Test 13: Clean the script so it is more readable at a glance.
+    //vTest 13: Clean the script so it is more readable at a glance.
     //TEst 14: Optimize: Perhaps only do proximity check when we move and place the plants.
+    //Test 15: Create a companion list of colors instead of any other color and dislikes?
+    //
 
     public int companionScore = 0;
     //public GameObject neighbourObject;
@@ -22,8 +24,9 @@ public class PlantPreference3D : MonoBehaviour
     //private List<Collider2D> hitCollidersList = new List<Collider2D>();
     private Collider[] hitCollidersArray;
     public List<GameObject> neighboursList = new List<GameObject>();
-    public List<Color> dislikesList = new List<Color>();
-    private Color dislikeColor = Color.blue;
+    //public List<Color> dislikesList = new List<Color>();
+    public List<Color> likesList = new List<Color>();
+    public Color dislikeColor = Color.blue;
 
 
     // Start is called before the first frame update
@@ -81,17 +84,19 @@ public class PlantPreference3D : MonoBehaviour
             //Check for companions
             foreach (GameObject neighbourGO in neighboursList)
             {
-                if (plantBase.plantColor != neighbourGO.transform.gameObject.GetComponent<PlantBase>().plantColor && dislikeColor != neighbourGO.transform.gameObject.GetComponent<PlantBase>().plantColor)
+                foreach(Color likesColor in likesList)
                 {
-                    //Found a companion.
-                    companionScore += 1;                    
-                    companionObject = neighbourGO.transform.gameObject;                    
-                }
-                else
-                {
-                    //Something extra?
-                }
-                
+                    if(likesColor == neighbourGO.transform.gameObject.GetComponent<PlantBase>().plantColor && dislikeColor != neighbourGO.transform.gameObject.GetComponent<PlantBase>().plantColor)
+                    {
+                        //Found a companion.
+                        companionScore += 1;
+                        companionObject = neighbourGO.transform.gameObject;
+                    }
+                    else
+                    {
+                        //Something extra?
+                    }
+                }                
             }
             //If no neighbour, then
             if(companionObject == null || !neighboursList.Contains(companionObject))

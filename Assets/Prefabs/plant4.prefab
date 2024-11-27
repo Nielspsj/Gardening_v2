@@ -4898,7 +4898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5564667379175867510
 Transform:
   m_ObjectHideFlags: 0
@@ -4984,7 +4984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 4b9bec321eba77f4986e1d19e575217e, type: 3}
       propertyPath: m_Name
-      value: plant4 Variant
+      value: plant4
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 4b9bec321eba77f4986e1d19e575217e, type: 3}
       propertyPath: m_TagString
@@ -4996,15 +4996,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b9bec321eba77f4986e1d19e575217e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.03
+      value: 19.173677
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b9bec321eba77f4986e1d19e575217e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.62
+      value: 0.8423357
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b9bec321eba77f4986e1d19e575217e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.07
+      value: 11.088503
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b9bec321eba77f4986e1d19e575217e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5130,7 +5130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4facd0e4efd908c40b4eda3ae6baf414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantColor: {r: 0, g: 0, b: 0, a: 0}
+  plantColor: {r: 0, g: 0, b: 0, a: 1}
   plantNumber: 0
   plantSize: 0
   companionEffect: {fileID: 1329757788889706301}
@@ -5147,9 +5147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   companionScore: 0
-  companionObject: {fileID: 0}
-  hitCollidersArray: []
   neighboursList: []
+  likesList:
+  - {r: 1, g: 0, b: 0, a: 1}
+  dislikeColor: {r: 0, g: 0, b: 1, a: 1}
 --- !u!4 &5277533351184805822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 4b9bec321eba77f4986e1d19e575217e, type: 3}
