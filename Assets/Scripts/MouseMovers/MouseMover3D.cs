@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class MouseMover3D : MonoBehaviour
@@ -26,14 +27,8 @@ public class MouseMover3D : MonoBehaviour
     private bool hitTheStorage = false;
     private Transform objectToMove;
     private Transform storageObject;
-    public List<Transform> storageObjectsList = new List<Transform>();
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //public List<Transform> storageObjectsList = new List<Transform>();
+    public Storage storage;
 
     private void Update () 
     {
@@ -49,7 +44,7 @@ public class MouseMover3D : MonoBehaviour
             }
             holdingAPlant = false;
         }
-        WinState();
+        
     }
 
     // Update is called once per frame
@@ -139,7 +134,8 @@ public class MouseMover3D : MonoBehaviour
         //Debug.Log("storage object info. " + "hitTheStorage: " + hitTheStorage + " - " + storageObject);
         objectToMove.parent = storageObject.transform;
         objectToMove.GetComponent<BoxCollider>().enabled = true;
-        storageObjectsList.Add(objectToMove);
+        //storageObjectsList.Add(objectToMove);
+        storage.AddToStorage(objectToMove);
         objectToMove = null;
         hitAPlant = false;
         hitTheStorage = false;
@@ -152,18 +148,11 @@ public class MouseMover3D : MonoBehaviour
             //Debug.Log("objectToMove: " + objectToMove);
             //objectToMove.parent = null;
             objectToMove.GetComponent<BoxCollider>().enabled = true;
-            storageObjectsList.Remove(objectToMove);
+            //storageObjectsList.Remove(objectToMove);
+            storage.RemoveFromStorage(objectToMove);
             objectToMove = null;
             hitAPlant = false;
             hitTheStorage = false;
         }        
-    }
-
-    private void WinState()
-    {
-        if(storageObjectsList.Count > 5)
-        {
-            Debug.Log("You win!");
-        }
-    }
+    }    
 }
