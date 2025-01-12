@@ -51,4 +51,10 @@ public class Motor_CharCtrl : MonoBehaviour
         body.Move(movement * force * Time.deltaTime);
         body.Move(bodyVelocity);
     }
+
+    //Tilt to align with the normal of the surface
+    private void AlignWithSurface()
+    {
+
+    }
 }
