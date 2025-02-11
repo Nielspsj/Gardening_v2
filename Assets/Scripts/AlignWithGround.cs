@@ -29,7 +29,7 @@ public class AlignWithGround : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 5, groundLayer))
         {
-            Debug.Log("Hit the ground!");
+            //Debug.Log("Hit the ground!");
             groundSurfaceHit = hit;
         }
     }
@@ -37,6 +37,6 @@ public class AlignWithGround : MonoBehaviour
     {
         Quaternion newRotation = Quaternion.FromToRotation(transform.up, groundSurfaceHit.normal) * transform.rotation;
         body.transform.rotation = Quaternion.Slerp(body.transform.rotation, newRotation, Time.deltaTime * rotationSmoothing);
-        Debug.Log("Rotating");
+        //Debug.Log("Rotating");
     }
 }

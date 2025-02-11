@@ -26,7 +26,7 @@ public class MountBehavior : MonoBehaviour
     void Start()
     {
         //Storage storage = new Storage();
-        Debug.Log("storagecount: " + storage.storageCount);
+        //Debug.Log("storagecount: " + storage.storageCount);
         currentStamina = maxStamina;
     }
 
@@ -70,11 +70,11 @@ public class MountBehavior : MonoBehaviour
 
         if (currentStamina <= 0)
         {
-            Debug.Log("Can't move!");
+            //Debug.Log("Can't move!");
             motor_CharCtrl.force = 0f;
         }
         //Debug.Log("storage.storageCount: " + storage.storageCount);
-        Debug.Log("currentStamina: " + currentStamina);
+        //Debug.Log("currentStamina: " + currentStamina);
 
     }
 }

@@ -10,7 +10,7 @@ public class Pickup : MonoBehaviour
         if(other.transform.tag == "Pickup")
         {
             pickupCount++;
-            Debug.Log("Pickup Count : " + pickupCount);
+            //Debug.Log("Pickup Count : " + pickupCount);
             Destroy(other.gameObject);
         }
     }

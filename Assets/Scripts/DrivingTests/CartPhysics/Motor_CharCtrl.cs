@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Motor_CharCtrl : MonoBehaviour
 {
+    //Test1: Set target for independent mound movement. Random at first
+    //Test2: Make it possible to set movementTarget from Behavior?
+    //Test3: Navmesh??
    
     [Tooltip("Maximum force to get this motor running")]
     public float force = 800;
@@ -16,6 +19,8 @@ public class Motor_CharCtrl : MonoBehaviour
     private float verticalInput;
     private float gravity = 5.5f;
     private Vector3 bodyVelocity;
+
+    private Vector3 movementTarget;
 
     // Start is called before the first frame update
     public void Start() {
@@ -51,10 +56,9 @@ public class Motor_CharCtrl : MonoBehaviour
         body.Move(movement * force * Time.deltaTime);
         body.Move(bodyVelocity);
     }
-
-    //Tilt to align with the normal of the surface
-    private void AlignWithSurface()
+    
+    private void MountMovement()
     {
-
+        //Random rotation for direction
     }
 }

@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7466424195828021180}
+  - component: {fileID: 7042798105867025770}
+  - component: {fileID: 2709128954366433809}
   m_Layer: 0
   m_Name: Cactus_1
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +34,56 @@ Transform:
   - {fileID: 1113887953583874365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7042798105867025770
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760136457139008762}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.52911645
+  m_Height: 1.576773
+  m_Direction: 1
+  m_Center: {x: -0.15655275, y: 0.7883864, z: -0.0761195}
+--- !u!54 &2709128954366433809
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760136457139008762}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!1001 &4678270372938082685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5394190647729575576, guid: f5448dbb680fe35468700501f699cc27, type: 3}
       propertyPath: m_TagString
-      value: Pickup
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5735858795150657600, guid: f5448dbb680fe35468700501f699cc27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,9 +154,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5394190647729575576, guid: f5448dbb680fe35468700501f699cc27, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7351168266262406962}
-    - targetCorrespondingSourceObject: {fileID: 5394190647729575576, guid: f5448dbb680fe35468700501f699cc27, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4704065329521629624}
   m_SourcePrefab: {fileID: 100100000, guid: f5448dbb680fe35468700501f699cc27, type: 3}
 --- !u!1 &734242657824587749 stripped
 GameObject:
@@ -149,39 +198,12 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.52911645
   m_Height: 1.576773
   m_Direction: 1
   m_Center: {x: -0.15655275, y: 0.7883864, z: -0.0761195}
---- !u!54 &4704065329521629624
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734242657824587749}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 0
 --- !u!4 &1113887953583874365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5735858795150657600, guid: f5448dbb680fe35468700501f699cc27, type: 3}
