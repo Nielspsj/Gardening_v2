@@ -472,11 +472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7466424195828021180, guid: 4479af64ace025449ba78ea64c8ffd4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 175.54
+      value: 170.5
       objectReference: {fileID: 0}
     - target: {fileID: 7466424195828021180, guid: 4479af64ace025449ba78ea64c8ffd4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.552498
+      value: 4.51
       objectReference: {fileID: 0}
     - target: {fileID: 7466424195828021180, guid: 4479af64ace025449ba78ea64c8ffd4c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3446,6 +3446,7 @@ MonoBehaviour:
   staminaLossPSecond: 1
   storage: {fileID: 1802543183}
   motor_CharCtrl: {fileID: 1946180427}
+  sense_Smell: {fileID: 0}
 --- !u!114 &1946180427 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4567925363634678695, guid: 5d55ca9d5beb8bd4db5ecd1cb3eeda00, type: 3}
@@ -3506,7 +3507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3163c1b0e14fb864f9d799c1ea1dddaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitCollidersArray: []
   foodLayerMask:
     serializedVersion: 2
     m_Bits: 512

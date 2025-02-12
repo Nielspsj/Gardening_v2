@@ -10,15 +10,14 @@ public class Sense_Smell : MonoBehaviour
     //Test3: Disable as food if in storage
 
 
-    public Collider[] hitCollidersArray;
+    private Collider[] hitCollidersArray;
     public LayerMask foodLayerMask;
-    //private List<GameObject> foodList = new List<GameObject>(); //Maybe use if Arrays are too annoying to use
-    
-
-    void Start()
+    private Transform closestTarget;
+    public Transform closestFood
     {
-        
+        get { return closestTarget; }
     }
+    //private List<GameObject> foodList = new List<GameObject>(); //Maybe use if Arrays are too annoying to use
 
     // Update is called once per frame
     void Update()
@@ -35,7 +34,7 @@ public class Sense_Smell : MonoBehaviour
 
     private void FindClosestTarget()
     {
-        Transform closestTarget = null;
+        closestTarget = null;
         float closestDistanceSqr = 25000f;
         Vector3 currentPosition = transform.position;
         if (hitCollidersArray.Length > 0)
@@ -49,6 +48,7 @@ public class Sense_Smell : MonoBehaviour
                     closestDistanceSqr = dSqrToTarget;
                     closestTarget = collider.transform;
                     //Debug.Log("closestTarget: " + closestTarget);
+                    //closestFood = closestTarget;
                 }
             }
         }        

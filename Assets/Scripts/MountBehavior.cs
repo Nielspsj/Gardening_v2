@@ -21,6 +21,7 @@ public class MountBehavior : MonoBehaviour
     private float timeToDoStuff = 0;
     public Storage storage;
     public Motor_CharCtrl motor_CharCtrl;
+    public Sense_Smell sense_Smell;
 
     // Start is called before the first frame update
     void Start()
@@ -76,5 +77,10 @@ public class MountBehavior : MonoBehaviour
         //Debug.Log("storage.storageCount: " + storage.storageCount);
         //Debug.Log("currentStamina: " + currentStamina);
 
+    }
+    private void HungerBehavior()
+    {
+        //Automatically happens for now
+        motor_CharCtrl.movementTarget = sense_Smell.closestFood.position;
     }
 }

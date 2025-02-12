@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Motor_CharCtrl : MonoBehaviour
 {
-    //Test1: Set target for independent mound movement. Random at first
+    //Test1: Set target for independent mound movement. Smelled foodtarget at first
     //Test2: Make it possible to set movementTarget from Behavior?
     //Test3: Navmesh??
-   
+    //Test4: Random target to wander around
+
     [Tooltip("Maximum force to get this motor running")]
     public float force = 800;
     public float maxSpeed = 1f;
@@ -20,7 +21,7 @@ public class Motor_CharCtrl : MonoBehaviour
     private float gravity = 5.5f;
     private Vector3 bodyVelocity;
 
-    private Vector3 movementTarget;
+    public Vector3 movementTarget;
 
     // Start is called before the first frame update
     public void Start() {
@@ -29,12 +30,16 @@ public class Motor_CharCtrl : MonoBehaviour
    
     private void Update()
     {
-        ControlHorse();        
+        ControlHorse();
+        if (movementTarget != null)
+        {
+            MountMovement();
+        }
     }
 
     private void ControlHorse()
     {
-        //Gracity
+        //Gravity
         if (body.isGrounded == true)
         {
             bodyVelocity.y = 0;
@@ -60,5 +65,35 @@ public class Motor_CharCtrl : MonoBehaviour
     private void MountMovement()
     {
         //Random rotation for direction
+        //Target for movement from behavior
+        //Move using .Move
+        //Move using Navmesh?
+
+        //Gravity
+        if (body.isGrounded == true)
+        {
+            bodyVelocity.y = 0;
+        }
+        else
+        {
+            bodyVelocity.y = -gravity * Time.deltaTime;
+        }
+
+        //horizontalInput = Input.GetAxis("Horizontal");
+        //Debug.Log("horizontalInput: " + horizontalInput);
+
+        //verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 dir = movementTarget - transform.position;
+        dir.Normalize();
+        float yInput = dir.y;
+        float zInput = dir.z;
+
+        body.transform.Rotate(Vector3.up * yInput * rotationSpeed * (10f * Time.deltaTime));
+        Vector3 movement = -zInput * body.transform.forward;
+
+        //Move + gravity
+        body.Move(movement * force * Time.deltaTime);
+        body.Move(bodyVelocity);
     }
 }
