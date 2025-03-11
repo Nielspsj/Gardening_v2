@@ -30,13 +30,36 @@ public class Motor_CharCtrl : MonoBehaviour
    
     private void Update()
     {
+        //ControlHorseDirectly();
         ControlHorse();
         if (movementTarget != null)
         {
-            MountMovement();
+            //MountMovement();
         }
     }
 
+    private void ControlHorseDirectly()
+    {
+        //Gravity
+        if (body.isGrounded == true)
+        {
+            bodyVelocity.y = 0;
+        }
+        else
+        {
+            bodyVelocity.y = -gravity * Time.deltaTime;
+        }
+
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        
+        body.transform.Rotate(Vector3.up * horizontalInput * rotationSpeed * (10f * Time.deltaTime));
+        Vector3 movement = verticalInput * body.transform.forward;
+
+        //Move + gravity
+        body.Move(movement * force * Time.deltaTime);
+        body.Move(bodyVelocity);
+    }
     private void ControlHorse()
     {
         //Gravity
@@ -50,10 +73,16 @@ public class Motor_CharCtrl : MonoBehaviour
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
-        //Debug.Log("horizontalInput: " + horizontalInput);
+        //verticalInput = Input.GetAxis("Vertical");
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            verticalInput = 1f;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            verticalInput = 0f;
+        }
 
-        verticalInput = Input.GetAxis("Vertical");
-        
         body.transform.Rotate(Vector3.up * horizontalInput * rotationSpeed * (10f * Time.deltaTime));
         Vector3 movement = verticalInput * body.transform.forward;
 
@@ -61,7 +90,7 @@ public class Motor_CharCtrl : MonoBehaviour
         body.Move(movement * force * Time.deltaTime);
         body.Move(bodyVelocity);
     }
-    
+
     private void MountMovement()
     {
         //Random rotation for direction

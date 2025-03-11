@@ -35,6 +35,10 @@ public class MountBehavior : MonoBehaviour
     void Update()
     {
         Timer();
+        if(motor_CharCtrl.movementTarget != null)
+        {
+            //HungerBehavior();
+        }
     }
     private void Timer()
     {
@@ -81,6 +85,7 @@ public class MountBehavior : MonoBehaviour
     private void HungerBehavior()
     {
         //Automatically happens for now
+        Debug.Log("sense_Smell.closestFood.position: " + sense_Smell.closestFood.position);
         motor_CharCtrl.movementTarget = sense_Smell.closestFood.position;
     }
 }

@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MouseRotator : MonoBehaviour
 {
+    //Test1: Add to RotateWithMouseInput the current rotation.
     public float sensitivity = 2f;
 
     private float x;
     private float y;
     private Vector3 rotate;
+
+    private float timeCount = 0.0f;
 
     private void Awake()
     {
@@ -25,6 +28,13 @@ public class MouseRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            //Need to start at current rotation of the camera holder.
+            //y = transform.localEulerAngles.y;
+            //x = transform.localEulerAngles.x;
+        }
+        
         if (Input.GetMouseButton(1))
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -43,6 +53,8 @@ public class MouseRotator : MonoBehaviour
         float max_y = 360.0f;
         float min_x = -45.0f;
         float max_x = 90.0f;
+
+        
 
         y += Input.GetAxis("Mouse X") * (sensitivity * Time.deltaTime);
         if (y < min_y)
@@ -63,7 +75,9 @@ public class MouseRotator : MonoBehaviour
             x = max_x;
         }
 
-        transform.rotation = Quaternion.Euler(x, y, 0);
+        //transform.rotation = Quaternion.Euler(x, y, 0);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(x, y, 0), 1000);
+        //timeCount = timeCount + Time.deltaTime;
         //rotate = new Vector3(x, y, 0);
         //transform.eulerAngles = transform.eulerAngles - rotate;
         //transform.Rotate(rotate);
