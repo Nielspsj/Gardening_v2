@@ -31,10 +31,11 @@ public class Motor_CharCtrl : MonoBehaviour
     private void Update()
     {
         //ControlHorseDirectly();
-        ControlHorse();
+        //ControlHorse();
         if (movementTarget != null)
         {
-            //MountMovement();
+            Debug.Log("has movementTarget");
+            MountMovement();
         }
     }
 
@@ -92,8 +93,7 @@ public class Motor_CharCtrl : MonoBehaviour
     }
 
     private void MountMovement()
-    {
-        //Random rotation for direction
+    {        
         //Target for movement from behavior
         //Move using .Move
         //Move using Navmesh?
@@ -113,16 +113,18 @@ public class Motor_CharCtrl : MonoBehaviour
 
         //verticalInput = Input.GetAxis("Vertical");
 
+        Debug.Log("movementTarget: " + movementTarget);
         Vector3 dir = movementTarget - transform.position;
         dir.Normalize();
+        Debug.Log("Direction: " + dir);
         float yInput = dir.y;
         float zInput = dir.z;
 
         body.transform.Rotate(Vector3.up * yInput * rotationSpeed * (10f * Time.deltaTime));
-        Vector3 movement = -zInput * body.transform.forward;
+        //Vector3 movement = -zInput * body.transform.forward;
 
         //Move + gravity
-        body.Move(movement * force * Time.deltaTime);
+        //body.Move(movement * force * Time.deltaTime);
         body.Move(bodyVelocity);
     }
 }
